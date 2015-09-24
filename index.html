@@ -1,19 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
-    
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>bodyschema movement</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Poiret+One|Abel|Josefin+Sans|Quicksand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-    
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    
+  <div class="container">
+    <div class="row">
+      <div>
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    bodyschema
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="#">welcome</a>
+            </li>
+            <div class="toggle">
+              <h4>Movement if Life</h4>   
+              <p>To me, if life boils down to one thing, its movement. To live is to keep moving. --Jerry Seinfeld<br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+            </div>
+            <li>
+                <a href="#">about</a>
+            </li>
+            <div class="toggle">
+              <p>Bodyschema is a home for exceptional movement education in Denver. With attention and playfulness, we explore movement through a process of inquiry, observation, and dynamic action. Whether your goal is to build strength and endurance, climb 14-ers’, run miles into old age, achieve full recovery from injuries, or simply have more flexibility and ease in your body and mind, let Bodyschema be your guide.</p>
+              <br>
+              <img id="dancingLadies" src="img/DancingLadies.png">
+              <p>Movement has taken Ashley from Cincinnati through New Zealand and currently to the beautiful state of Colorado. A fully Certified Comprehensive Pilates Instructor and 500 HR Yoga Instructor, she has been practicing and teaching for nearly 15 years. Over those years she has had the pleasure to teach; Olympic athletes, dancers, polio survivors, mothers to be and mothers of all ages, nurses, receivers of bionic limbs, those recovering from brain injuries, models, office workers, you name it.</p>
+              <br>
+              <p>She has taught in New York City at Mark Morris Dance Center, Bridge Pilates, and Sixth Street Pilates; in San Francisco at Real People Pilates and The San Francisco Bay Club; on the faculty of the Bates Dance Festival and the American Dance Festival; as well as internationally presenting workshops to fellow teachers and movers alike.</p>
+            </div>            
+            <li>
+                <a href="#">services</a>
+            </li>
+            <div class="toggle">
+              <h4>Movement if Life</h4>   
+              <p>Using the tools of Yoga and Pilates, we do what you don’t ordinarily do, so that you can do what you want.
+ 
+              I facilitate and guide your body, mind & abilities.
+              We develop strength and flexibility through training with minimum effort and maximum efficiency.
+              You perform better.
+              </p>
+              <p>
+
+              Private lessons with a qualified teacher are invaluable. They are essential to developing and deepening a movement practice. For newer students, privates offer a slower pace and a safe space to ask questions and avoid injuries. For more experienced practitioners, privates provide the relationship and the tools to navigate the questions that arise from a regular, consistent practice. Depending on your needs, private lessons range from assistance through injury and individual inquiry to guidance through personal goals and mentoring for professionals.</p>
+            </div>            
+            <li>
+              <a href="#modal" id="location" data-toggle="modal" data-target="#modal">location</a>
+            </li>           
+            <li>
+              <a id='contact'>contact</a>
+            </li>
+            <div class="toggle">
+              <div class="col-md-4 col-sm-12">
+                <div id="card">
+                  <h3>Ashley James</h3>
+                  <img src="img/ashley-face-no-bg.png">
+                  <address>
+                    <a href="mailto:bodyschema.move@gmail.com"><span class="glyphicon glyphicon-envelope">&nbsp;</span>bodyschema.move@gmail.com</a>
+                    <br>
+                    <a tel:"5102894464"><span class="glyphicon glyphicon-phone-alt">&nbsp;</span>510 289 4464</a>
+                  </address>
+                </div>
+              </div>    
+                <div class="col-md-6 col-sm-12" id="contactForm">
+                  <button class="btn btn-default btn-xl" href="#modal-form" id="hello" data-toggle="modal" data-target="#modal-form">Say Hello</button>
+                </div>
+              </div>
+            </div>            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade toggle" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h5 class="modal-title">Come Move...</h5>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="map" id="map" style></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade toggle" id="modal-form">
+      <div class="modal-dialog">
+        <div class="modal-content blur">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 class="modal-title">Say Hello...</h3>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form name="sentMessage" id="contactForm" action="http://formspree.io/pete.james.jeffryes@gmail.com" method="POST">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="Name" id="name" required="true">
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email Address" id="email" required="true">
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required="true" >
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required="true"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
