@@ -15,6 +15,10 @@ body {
     font-weight: 500;
 }
 
+.glyphicon-option-horizontal {
+    font-size: 3rem;
+}
+
 
 /**************************/
 /* logo */
@@ -33,12 +37,13 @@ body {
 
 #line-3 {
     font-size: 1.7rem;
+    margin-bottom: 3rem;
 }
 
 
 
 /**************************/
-/* menu */
+/*    menu                */
 /**************************/
 
 
@@ -92,20 +97,31 @@ body {
 /* about */
 /**************************/
 
-#dancingLadies {
-	border-radius: 14rem;
-	border: solid #fff 4px;
-	width: 20rem;
-	float: right;
-	margin: 4rem;
-}
+
 
 /**************************/
 /* price card */
 /**************************/
 
 .price-card {
-    font-size: 2rem; 
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.price-card a {
+    font-style: italic;
+}
+
+.fine-print {
+    font-size: 1.2rem;
+}
+
+.panel {
+    border-radius: 2rem;
+    box-shadow: 3px 3px 5px #3C797F;
+    margin: 4rem 0; 
+    background-color: #CFF2FF;
 }
 
 /**************************/
@@ -263,13 +279,17 @@ form .row:first-child .floating-label-form-group {
 	width: 16rem;
 }
 
+.btn-shaddow {
+    box-shadow: 0px 2px 3px #3C797F;
+}
+
 /**************************/
 /* mobile layout */
 /**************************/
 
 @media only screen and (max-width: 600px) {
 	body {
-		/*background-position: center;*/
+        padding: 5px;
 		background-image: none; 
 	}
 
@@ -297,4 +317,6 @@ form .row:first-child .floating-label-form-group {
 			border-radius: none;
 			background-color: none;
 	}
+
+
 }
