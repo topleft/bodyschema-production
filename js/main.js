@@ -14,15 +14,12 @@ var marker;
 var infowindow;
 
 function init() {
-
-  
   map = new google.maps.Map(document.getElementById("map"),{
 		      center: {lat:39.7385188,lng:-104.9514281},
 		      zoom:12
 		});
 		  
   var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"}); 
-
 
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
@@ -36,12 +33,9 @@ function init() {
     content: "<div><a href='https://goo.gl/maps/FsiZJUyFGmT2'><h4>Bodyschema Movement</h4><p>3015 E 14th Ave, Denver, CO 80206, USA</p></a><a href="+'tel:+15102891955'+">(510) 289-1955</a></div>"
   });
 
-
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
-
-
 };
 
 
@@ -84,7 +78,7 @@ $("#modal").on('shown.bs.modal', function() {
 $(".sidebar-nav").on("click", "li", function(){
 	var block = $(this).next("div")[0];
 	showHide(block, "toggle");
-})
+});
 
 var showHide = function(elem, elemClass) {
 	elem = $(elem); 
@@ -98,7 +92,8 @@ var showHide = function(elem, elemClass) {
 };
 
 // **** smooth scroll ******* //
-	var scroll = true;
+	
+  var scroll = true;
   $("#contact").on("click", function(e){
   	if (scroll){
     	setTimeout(
