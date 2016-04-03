@@ -6,6 +6,16 @@ body {
   background-position: 60rem 5rem;
 }
 
+a {
+  cursor: pointer;
+  color: #22A9CC;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #63BDD4;
+}
+
 .center {
     text-align: center;
 }
@@ -18,6 +28,7 @@ body {
 .glyphicon-option-horizontal {
     font-size: 3rem;
 }
+
 
 
 /**************************/
@@ -52,7 +63,7 @@ body {
 }
 
 .sidebar-nav li {
-	margin: 1rem; 
+	margin: 1rem;
     line-height: 40px;
 }
 
@@ -86,7 +97,7 @@ body {
 }
 
 .toggle p {
-	margin: 1rem; 
+	margin: 1rem;
 	font-size: 2rem;
     font-weight: 300;
 }
@@ -120,7 +131,7 @@ body {
 .panel {
     border-radius: 2rem;
     box-shadow: 3px 3px 5px #3C797F;
-    margin: 4rem 0; 
+    margin: 4rem 0;
     background-color: #CFF2FF;
 }
 
@@ -262,7 +273,7 @@ form .row:first-child .floating-label-form-group {
 
 #card {
 	font-size: 1.8rem;
-	margin: 0.5rem; 
+	margin: 0.5rem;
 }
 
 #card:active  {
@@ -272,7 +283,7 @@ form .row:first-child .floating-label-form-group {
 
 #card a:hover {
 	text-decoration: none;
-	color: white;
+	color: #63BDD4;
 }
 
 #card img {
@@ -290,7 +301,7 @@ form .row:first-child .floating-label-form-group {
 @media only screen and (max-width: 600px) {
 	body {
         padding: 5px;
-		background-image: none; 
+		background-image: none;
 	}
 
 	.sidebar-nav {
@@ -301,7 +312,7 @@ form .row:first-child .floating-label-form-group {
 	.sidebar-nav li {
 		margin: auto;
 		margin-top: 1rem;
-		border: #22A9CC solid 1px; 
+		border: #22A9CC solid 1px;
 		border-radius: 2rem;
 		background-color: rgba(255, 255, 255, 0.2);
 		text-align: center;
@@ -312,8 +323,8 @@ form .row:first-child .floating-label-form-group {
 	}
 
 	.sidebar-nav > .sidebar-brand li {
-	    font-size:3rem; 
-	    border: none; 
+	    font-size:3rem;
+	    border: none;
 			border-radius: none;
 			background-color: none;
 	}
