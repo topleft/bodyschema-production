@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
   </head>
   <body>
-  <div class="container">
+  <div>
     <div class="row">
       <div>
         <div class="row headline">
@@ -59,6 +59,9 @@
             </li>
             <div class="toggle row">
             <div class="border col-md-8 col-sm-12 col-md-offset-1">
+              <div class="row">
+                <img id="about-img" class="center-block img-responsive round-corners margin-top margin-bottom" src="./img/ashley-highlands-bw.png" alt="" />
+              </div>
               <p>&nbsp;&nbsp;&nbsp;<span class="highlight">Movement</span> has taken Ashley from NYC to SF, through New Zealand and currently to the beautiful state of Colorado. A fully Certified Comprehensive Pilates Instructor and 500 HR Yoga Instructor, she has been practicing and teaching for nearly 15 years. Over those years she has had the pleasure to teach; Olympic athletes, dancers, polio survivors, mothers to be and mothers of all ages, nurses, receivers of bionic limbs, those recovering from brain injuries, models, office workers, you name it.</p>
               <div class="center col-xs-2 col-xs-offset-5 glyphicon glyphicon-option-horizontal"></div>
               <br/>
@@ -67,23 +70,17 @@
             </div>
             </div>
             <li>
-                <a href="#">lessons</a>
+              <a href="#">lessons</a>
             </li>
             <div class="toggle row">
             <div class="border col-md-8 col-sm-12 col-md-offset-1">
+
               <div>
               <br/>
                 <p class="center">
                 Using the tools of <span class="highlight">Yoga</span> and <span class="highlight">Pilates</span>, we do what you don’t ordinarily do, so that you can do what you want.
                 </p>
               </div>
-              <br/>
-              <div class="center col-xs-2 col-xs-offset-5 glyphicon glyphicon-option-horizontal"></div>
-              <br/>
-              <br/>
-              <p>&nbsp;&nbsp;&nbsp;
-              <span class="highlight">Private</span> lessons with a qualified teacher are invaluable. They are essential to developing and deepening a movement practice. For newer students, privates offer a slower pace and a safe space to ask questions and avoid injuries. For more experienced practitioners, privates provide the relationship and the tools to navigate the questions that arise from a regular, consistent practice. Depending on your needs, private lessons range from assistance through injury and individual inquiry to guidance through personal goals and mentoring for professionals.
-              </p>
               <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                   <div class="panel panel-info">
@@ -98,12 +95,29 @@
                   </div>
                 </div>
               </div>
+              <p>&nbsp;&nbsp;&nbsp;
+              <span class="highlight">Private</span> lessons with a qualified teacher are invaluable. They are essential to developing and deepening a movement practice. For newer students, privates offer a slower pace and a safe space to ask questions and avoid injuries. For more experienced practitioners, privates provide the relationship and the tools to navigate the questions that arise from a regular, consistent practice. Depending on your needs, private lessons range from assistance through injury and individual inquiry to guidance through personal goals and mentoring for professionals.
+              </p>
             </div>
             </div>
 
             <li>
-              <a href="#modal" id="location" data-toggle="modal" data-target="#modal">location</a>
+              <a data-target="#modal">location</a>
             </li>
+            <div class="toggle row">
+              <div class="border col-md-8 col-sm-12 col-md-offset-1">
+                <div class="col-md-6 col-sm-12">
+                  <div class="center-block">
+                    <a id="congresspark" data-toggle="modal" data-target="#modal">congress park</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="center-block">
+                    <a id="highlands" data-toggle="modal" data-target="#modal">highlands</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <li>
               <a href="#" id='contact'>contact</a>
             </li>
@@ -120,7 +134,7 @@
                 </div>
               </div>
                 <div class="col-md-6 col-sm-12" id="contactForm">
-                  <button class="btn btn-default btn-xl btn-shaddow" href="#modal-form" id="hello" data-toggle="modal" data-target="#modal-form">Say Hello!</button>
+                  <button class="btn btn-default btn-xl btn-shaddow" href="#modal-form" id="hello" data-toggle="modal" data-target="#modal-form">Book a Lesson!</button>
                 </div>
               </div>
             </div>
@@ -139,7 +153,8 @@
           <div class="modal-body">
             <div class="row">
               <div class="col-md-12">
-                <div class="map" id="map" style></div>
+                <div class="map" id="congresspark-map" style></div>
+                <div class="map" id="highlands-map" style></div>
               </div>
             </div>
             <div class="modal-footer">
@@ -154,7 +169,7 @@
         <div class="modal-content blur">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 class="modal-title">Say Hello...</h3>
+            <h3 class="modal-title">Book a Lesson...</h3>
           </div>
           <div class="modal-body">
             <div class="row">

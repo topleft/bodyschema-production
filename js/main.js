@@ -2,39 +2,60 @@
 
 $(document).on('ready', function() {
   console.log('sanity check!');
-  // ** create map ** //
+  // ** create maps ** //
   init();
 });
 
 
 // -- google map ---- //
 
+var highlands = {};
+var congresspark = {};
 var map;
-var marker;
-var infowindow;
 
 function init() {
-  map = new google.maps.Map(document.getElementById("map"),{
+  highlands.map = new google.maps.Map(document.getElementById("highlands-map"),{
 		      center: {lat: 39.7619471, lng: -105.0377847},
+		      zoom:12
+		});
+
+  congresspark.map = new google.maps.Map(document.getElementById("congresspark-map"),{
+		      center: {lat: 39.738560, lng: -104.950838},
 		      zoom:12
 		});
 
   var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
-  map.mapTypes.set('map_style', styledMap);
-  map.setMapTypeId('map_style');
+  highlands.map.mapTypes.set('map_style', styledMap);
+  highlands.map.setMapTypeId('map_style');
 
-  marker = new google.maps.Marker({
+  congresspark.map.mapTypes.set('map_style', styledMap);
+  congresspark.map.setMapTypeId('map_style');
+
+  highlands.marker = new google.maps.Marker({
     position: {lat: 39.7619471, lng: -105.0377847},
-    map: map
+    map: congresspark.map
   });
 
-  infowindow = new google.maps.InfoWindow({
+  congresspark.marker = new google.maps.Marker({
+    position: {lat: 39.738560, lng: -104.950838},
+    map: highlands.map
+  });
+
+  highlands.infowindow = new google.maps.InfoWindow({
     content: "<div><a href='https://goo.gl/maps/MnsY4zfPnqv'><h4>Bodyschema Movement @ Highlands Pilates</h4><p>3630 W 32nd Ave #2, Denver, CO 80211</p></a><a href="+'tel:+15102894464'+">(510) 289-4464</a></div>"
   });
 
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
+  congresspark.infowindow = new google.maps.InfoWindow({
+    content: "<div><a href='https://goo.gl/maps/ECoU2RXYdJL2'><h4>Bodyschema Movement @ Congress Park Studio</h4><p>1379 St. Paul Street, Denver, CO 80206</p></a><a href="+'tel:+15102894464'+">(510) 289-4464</a></div>"
+  });
+
+  highlands.marker.addListener('click', function() {
+    highlands.infowindow.open(highlands.map, highlands.marker);
+  });
+
+  congresspark.marker.addListener('click', function() {
+    congresspark.infowindow.open(congresspark.map, congresspark.marker);
   });
 };
 
@@ -65,13 +86,33 @@ var styles = [
 
 
 // **** show map in modal ******* //
+//
+
+$("#highlands").on('click', function() {
+  console.log(highlands);
+    map = highlands
+    $("#highlands-map").removeClass("hidden")
+    $("#congresspark-map").addClass("hidden")
+});
+
+$("#congresspark").on('click', function() {
+    map = congresspark
+    $("#congresspark-map").removeClass("hidden")
+    $("#highlands-map").addClass("hidden")
+});
+
 
 $("#modal").on('shown.bs.modal', function() {
-	  var center = map.getCenter();
-    google.maps.event.trigger(map, "resize");
-    map.setCenter(center);
-	  infowindow.open(map, marker);
+    console.log(map);
+    var center = map.map.getCenter();
+    google.maps.event.trigger(map.map, "resize");
+    map.map.setCenter(center);
+    setTimeout(function(){
+      map.infowindow.open(map.map, map.marker);
+    }, 400)
  });
+
+
 
 // **** accoridian toggles ******* //
 
