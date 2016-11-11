@@ -161,6 +161,10 @@ a:hover {
 	outline: none;
 }
 
+#congresspark-map img, #highlands-map img {
+  max-width: none;
+}
+
 
 
 /**************************/

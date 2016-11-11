@@ -3,7 +3,7 @@
 $(document).on('ready', function() {
   console.log('sanity check!');
   // ** create maps ** //
-  init();
+  init()
 });
 
 
@@ -57,7 +57,21 @@ function init() {
   congresspark.marker.addListener('click', function() {
     congresspark.infowindow.open(congresspark.map, congresspark.marker);
   });
+
+  // var center = congresspark.map.getCenter();
+  // google.maps.event.trigger(congresspark.map, "resize");
+  // congresspark.map.setCenter(center);
+  // // congresspark.infowindow.open(congresspark.map, congresspark.marker);
+  //
+  // map = highlands
+  // var center = map.map.getCenter();
+  // google.maps.event.trigger(map.map, "resize");
+  // map.map.setCenter(center);
+  // // highlands.infowindow.open(highlands.map, highlands.marker);
+  //
+  // setTimeout(function(){cb()}, 1000)
 };
+
 
 
 // **** custom map styles ******* //
@@ -88,28 +102,29 @@ var styles = [
 // **** show map in modal ******* //
 //
 
-$("#highlands").on('click', function() {
-  console.log(highlands);
-    map = highlands
-    $("#highlands-map").removeClass("hidden")
-    $("#congresspark-map").addClass("hidden")
-});
 
-$("#congresspark").on('click', function() {
-    map = congresspark
-    $("#congresspark-map").removeClass("hidden")
-    $("#highlands-map").addClass("hidden")
-});
+$("#congresspark-modal").on('shown.bs.modal', function() {
+    // init(function() {
+    // })
+	  var center = congresspark.map.getCenter();
+    // congresspark.infowindow.open(congresspark.map, congresspark.marker);
+    google.maps.event.trigger(congresspark.map, "resize", function(){
+      congresspark.map.setCenter(center);
+      congresspark.infowindow.open(congresspark.map, congresspark.marker);
 
+    }
+  );
+ });
 
-$("#modal").on('shown.bs.modal', function() {
-    console.log(map);
-    var center = map.map.getCenter();
-    google.maps.event.trigger(map.map, "resize");
-    map.map.setCenter(center);
-    setTimeout(function(){
-      map.infowindow.open(map.map, map.marker);
-    }, 400)
+$("#highlands-modal").on('shown.bs.modal', function() {
+    // init(function(){
+    //   highlands.infowindow.open(highlands.map, highlands.marker);
+    // })
+    // // map = highlands
+    // // map.infowindow.open(map.map, map.marker);
+	  // // var center = map.map.getCenter();
+    // // google.maps.event.trigger(map.map, "resize");
+    // // map.map.setCenter(center);
  });
 
 
