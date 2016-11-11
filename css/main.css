@@ -140,6 +140,28 @@ a:hover {
 }
 
 /**************************/
+/* location */
+/**************************/
+
+.location-link a {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.location-link a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.location-link a:active,
+.location-link a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/**************************/
 /* map */
 /**************************/
 
@@ -342,5 +364,8 @@ form .row:first-child .floating-label-form-group {
 			background-color: none;
 	}
 
+  .location-link p {
+      text-align: center;
+  }
 
 }
