@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font-family: 'Fira Sans', sans-serif;  background: #BFF2FF;
+  font-family: 'Fira Sans', sans-serif;
+  background: #BFF2FF;
   background-image: url("../img/Circle-white.png");
   background-repeat: no-repeat;
   background-position: 60rem 5rem;
@@ -37,18 +38,30 @@ a:hover {
 
 
 .headline {
-    text-align: center;
-    color: #22A9CC;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+  color: #22A9CC;
 }
 
+.headline h1 {
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 200;
+  line-height: 1;
+}
+
+
 #line-2 {
-    font-size: 2rem;
+  font-size: 2rem;
+  color: #FFF;
+  /* color: rgba(34, 169, 204, 0.8); */
 
 }
 
 #line-3 {
-    font-size: 1.7rem;
-    margin-bottom: 3rem;
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+  /* color: rgba(34, 169, 204, 0.8); */
 }
 
 
@@ -100,7 +113,8 @@ a:hover {
 .toggle p {
 	margin: 1rem;
 	font-size: 2rem;
-    font-weight: 300;
+  font-weight: 300;
+  text-align: center;
 }
 
 
@@ -122,6 +136,7 @@ a:hover {
     font-size: 2rem;
     color: white;
     text-align: center;
+    padding: 2rem 0 1.5rem 0;
 }
 
 .price-card a {
@@ -135,7 +150,7 @@ a:hover {
 .panel {
     border-radius: 2rem;
     box-shadow: 3px 3px 5px #3C797F;
-    margin: 4rem 0;
+    margin: 2rem 0 3rem 0;
     background-color: #CFF2FF;
 }
 
